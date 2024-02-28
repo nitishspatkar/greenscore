@@ -1,93 +1,83 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2708
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\deftab720
-\pard\pardeftab720\partightenfactor0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hexagonal Layout</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Neutral background to complement the colorful hexagons */
+  }
 
-\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 <!DOCTYPE html>\
-<html lang="en">\
-<head>\
-<meta charset="UTF-8">\
-<meta name="viewport" content="width=device-width, initial-scale=1.0">\
-<title>Hexagonal Layout</title>\
-<style>\
-  body, html \{\
-    margin: 0;\
-    padding: 0;\
-    height: 100%;\
-    display: flex;\
-    flex-direction: column;\
-    justify-content: center;\
-    align-items: center;\
-    background-color: #f0f0f0; /* Neutral background to complement the colorful hexagons */\
-  \}\
-\
-  .banner \{\
-    width: 80%; /* Responsive width */\
-    margin-bottom: 20px; /* Space between banner and hexagons */\
-    padding: 20px;\
-    background-color: #78909C; /* Matching the central hexagon for consistency */\
-    color: #fff; /* White text for contrast */\
-    text-align: center;\
-    border-radius: 10px; /* Soft rounded corners for a modern look */\
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */\
-    font-family: Arial, sans-serif; /* Clean, readable font */\
-  \}\
-\
-  .hexagon-container \{\
-    position: relative;\
-    width: 700px; /* Adjusted container size for optimal spacing */\
-    height: 600px; /* Adjusted container size for optimal spacing */\
-    display: flex;\
-    justify-content: center;\
-    align-items: center;\
-  \}\
-\
-  .hexagon \{\
-    width: 120px;\
-    height: 138px;\
-    display: flex;\
-    justify-content: center;\
-    align-items: center;\
-    text-align: center;\
-    color: #fff; /* White text color for contrast */\
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);\
-    position: absolute;\
-  \}\
-\
-  /* Hexagon colors and positioning */\
-  #center-hexagon \{ background-color: #00BFFF; \}\
-  #hexagon-1 \{ background-color: #FF7F50; transform: translate(-70px, -121px); \}\
-  #hexagon-2 \{ background-color: #90EE90; transform: translate(70px, -121px); \}\
-  #hexagon-3 \{ background-color: #FFD700; transform: translate(140px, 0); \}\
-  #hexagon-4 \{ background-color: #FF69B4; transform: translate(70px, 121px); \}\
-  #hexagon-5 \{ background-color: #1E90FF; transform: translate(-70px, 121px); \}\
-  #hexagon-6 \{ background-color: #FF6347; transform: translate(-140px, 0); \}\
-\
-  span \{\
-    padding: 20px;\
-    display: inline-block;\
-    position: relative;\
-    z-index: 2;\
-  \}\
-</style>\
-</head>\
-<body>\
-<div class="banner">\
-  Welcome to Our Greenscore Portal. On our platform, anyone can explore how Swiss companies are leading the industry with their commitment to sustainability.\
-</div>\
-<div class="hexagon-container">\
-  <div class="hexagon" id="center-hexagon"><span>Company Name</span></div>\
-  <div class="hexagon" id="hexagon-1"><span>Dimension 1<br>Rating: A</span></div>\
-  <div class="hexagon" id="hexagon-2"><span>Dimension 2<br>Rating: B</span></div>\
-  <div class="hexagon" id="hexagon-3"><span>Dimension 3<br>Rating: C</span></div>\
-  <div class="hexagon" id="hexagon-4"><span>Dimension 4<br>Rating: D</span></div>\
-  <div class="hexagon" id="hexagon-5"><span>Dimension 5<br>Rating: E</span></div>\
-  <div class="hexagon" id="hexagon-6"><span>Dimension 6<br>Rating: F</span></div>\
-</div>\
-</body>\
-</html>\
-}
+  .banner {
+    width: 80%; /* Responsive width */
+    margin-bottom: 20px; /* Space between banner and hexagons */
+    padding: 20px;
+    background-color: #78909C; /* Matching the central hexagon for consistency */
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    border-radius: 10px; /* Soft rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    font-family: Arial, sans-serif; /* Clean, readable font */
+  }
+
+  .hexagon-container {
+    position: relative;
+    width: 700px; /* Adjusted container size for optimal spacing */
+    height: 600px; /* Adjusted container size for optimal spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hexagon {
+    width: 120px;
+    height: 138px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff; /* White text color for contrast */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    position: absolute;
+  }
+
+  /* Hexagon colors and positioning */
+  #center-hexagon { background-color: #00BFFF; }
+  #hexagon-1 { background-color: #FF7F50; transform: translate(-70px, -121px); }
+  #hexagon-2 { background-color: #90EE90; transform: translate(70px, -121px); }
+  #hexagon-3 { background-color: #FFD700; transform: translate(140px, 0); }
+  #hexagon-4 { background-color: #FF69B4; transform: translate(70px, 121px); }
+  #hexagon-5 { background-color: #1E90FF; transform: translate(-70px, 121px); }
+  #hexagon-6 { background-color: #FF6347; transform: translate(-140px, 0); }
+
+  span {
+    padding: 20px;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+  }
+</style>
+</head>
+<body>
+<div class="banner">
+  Welcome to Our Greenscore Portal. On our platform, anyone can explore how Swiss companies are leading the industry with their commitment to sustainability.
+</div>
+<div class="hexagon-container">
+  <div class="hexagon" id="center-hexagon"><span>Company Name</span></div>
+  <div class="hexagon" id="hexagon-1"><span>Dimension 1<br>Rating: A</span></div>
+  <div class="hexagon" id="hexagon-2"><span>Dimension 2<br>Rating: B</span></div>
+  <div class="hexagon" id="hexagon-3"><span>Dimension 3<br>Rating: C</span></div>
+  <div class="hexagon" id="hexagon-4"><span>Dimension 4<br>Rating: D</span></div>
+  <div class="hexagon" id="hexagon-5"><span>Dimension 5<br>Rating: E</span></div>
+  <div class="hexagon" id="hexagon-6"><span>Dimension 6<br>Rating: F</span></div>
+</div>
+</body>
+</html>
